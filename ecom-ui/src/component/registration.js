@@ -1,24 +1,44 @@
-import '../App.css';
-
+import { useState } from 'react';
+import Register from './Register';
+import Login from './login';
+import './style.css'
 function Registration() {
+
+
+    const [currentPage, setCurrentPage] = useState(<Register />);
+
+    const showLogin = () => {
+        setCurrentPage( <Login /> )
+    } 
+
+    const showRegistration = () => {
+        setCurrentPage( <Register /> )
+    }
+
 
     return (
         <>
 
-            <div className='local-container'>
+            <div className='container square-box d-flex justify-content-center align-item-center'  >
 
 
-                <div className="input-group">
-                    <span className="input-group-text" id="basic-addon1">Username</span>
-                    <input type="text" className="form-control" placeholder="Username" aria-describedby="basic-addon1" />
-                </div>
+                <div className='login-container' >
+                    <div className="btn-group btn-width " role="group">
+                        <button type="button" className="btn btn-success" onClick={showLogin}> <h3> Login </h3> </button>
 
-                <div className="input-group">
-                    <span className="input-group-text" id="basic-addon1">Password</span>
-                    <input type="text" className="form-control" placeholder="Username" aria-describedby="basic-addon1" />
+                        <button type="button" className="btn btn-info" onClick={showRegistration}> <h3> Registration</h3></button>
+                    </div>
+
+
+                    <div>{currentPage}</div>
+
                 </div>
 
             </div>
+
+
+
+
         </>
     )
 
