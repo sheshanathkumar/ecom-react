@@ -29,16 +29,11 @@ function Registration() {
                         <button type="button" className="btn btn-info" onClick={showRegistration}> <h3> Registration</h3></button>
                     </div>
 
-
                     <div>{currentPage}</div>
 
                 </div>
 
             </div>
-
-
-
-
         </>
     )
 
