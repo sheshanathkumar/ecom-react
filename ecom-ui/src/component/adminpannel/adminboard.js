@@ -19,9 +19,9 @@ function Adminboard() {
     return (
         <>
 
-            <div className='container d-flex justify-content-center my-3' >
+            <div className='container d-flex justify-content-center' >
                 <div className='admin-square' >
-                    <h2>Admin Dashboard</h2>
+                    <h2 className='my-3'>Admin Dashboard</h2>
                     <div className='menu-square justify-content-center'>
                         <div className='menu-items d-flex justify-content-center align-items-center'>
                             

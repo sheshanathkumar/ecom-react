@@ -5,7 +5,7 @@ import './style.css'
 function Registration() {
 
 
-    const [currentPage, setCurrentPage] = useState(<Register />);
+    const [currentPage, setCurrentPage] = useState(<Login />);
 
     const showLogin = () => {
         setCurrentPage( <Login /> )
@@ -23,10 +23,9 @@ function Registration() {
 
 
                 <div className='login-container' >
-                    <div className="btn-group btn-width " role="group">
-                        <button type="button" className="btn btn-success" onClick={showLogin}> <h3> Login </h3> </button>
-
-                        <button type="button" className="btn btn-info" onClick={showRegistration}> <h3> Registration</h3></button>
+                    <div className="btn-group btn-width  " role="group">
+                        <button type="button" className="btn btn-border" onClick={showLogin}> <h3> Login </h3> </button>
+                        <button type="button" className="btn btn-border" onClick={showRegistration}> <h3> Registration</h3></button>
                     </div>
 
                     <div>{currentPage}</div>
